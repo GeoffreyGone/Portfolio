@@ -1,4 +1,82 @@
 #nav-logo{
     width: 90px;
     height: 90px;
+
+}
+#image-name{
+    color: #e43d31;
+    text-transform: uppercase;
+    font-family: fantasy
+    font-size: 25px;
+    letter-spacing: 5px;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(163, 235, 163);
+    font-family: fantasy;
+
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+}
+.nav-links li{
+    list-style: none;
+
+}
+
+.nav-links a{
+    color: rgb(202, 66, 157);
+    text-decoration: none;
+
+}
+
+.burger div{
+    width: 30px;
+    height: 5px;
+    background-color: rgb(202, 66, 157);
+    margin: 5px;
+}
+.burger{
+    /* this is used to hide the burger menu */
+    display: none;
+    cursor: pointer;
+}
+/* this is for my mobile view */
+@media screen and (max-width: 768px){
+    body{
+        /* the display none is to check whether we had the mobile view px correctly */
+        /* display: none; */
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color:rgb(163, 235, 163);
+        font-family: fantasy;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 15%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li{
+        opacity: 0;
+    }
+
+    .burger{
+        display: block;
+    }
+
 }
