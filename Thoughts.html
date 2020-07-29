@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>All Lessons</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      .all {
+        margin-left: 90px;
+        margin-right: 90px;
+        margin-top: 40px;
+      }
+
+      .heading {
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .Date {
+        background-color: antiquewhite;
+        color: black;
+        width: 100%;
+        padding: 18px;
+        border-radius: 10px;
+        border: black;
+        margin: auto;
+        margin-top: 10px;
+        font-size: 55%;
+        transition: 0.4s;
+        display: inline-block;
+      }
+
+      .notes {
+        padding: 0px 18px;
+        margin-top: 10px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+
+      .active,
+      .Date:hover{
+          background-color: turquoise;
+      }
+
+      .Date:after {
+          content: "\1F447";
+          margin-left: 100%;
+      }
+
+      .active:after{
+          content: "\1F446";
+      }
+
+      /* For Mobile View */
+      @media screen and (max-width: 768px) {
+          .all{
+              margin-left: 10px;
+              margin-right: 10px;
+              margin-top: 20px;
+          }
+
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <nav>
+      <div class="logo">
+        <img class="image" src="./image/logo.png" alt="" />
+        <h4>my text</h4>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="./index.html">HOME</a>
+        </li>
+        <li>
+          <a href="#">ABOUT</a>
+        </li>
+        <li>
+          <a href="#">PROJECTS</a>
+        </li>
+        <li>
+          <a href="./Assignment1.html">ASSIGNMENTS</a>
+        </li>
+        <li>
+          <a href="./Thoughts.html">LESSONS</a>
+        </li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+
+
+    <div class="all">
+      <div class="heading">
+        <h2>&#128218 This is the heading for my page &#128188</h2>
+
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum est
+          harum ducimus accusantium assumenda vitae nobis sint porro pariatur,
+          aperiam minus modi aspernatur consequuntur inventore architecto
+          reiciendis deleniti! Assumenda, minima!
+        </p>
+      </div>
+      <button class="Date">
+        Day 1
+        <br />
+        Monday 20th July, 2020
+      </button>
+
+      <div class="notes">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aliquid
+          at nesciunt ipsa numquam aliquam corrupti error! Neque accusantium
+          laudantium explicabo, ea qui pariatur aut ex inventore reiciendis!
+          Vitae, blanditiis!
+        </p>
+      </div>
+
+      <button class="Date">
+        Day 1
+        <br />
+        Monday 20th July, 2020
+      </button>
+
+      <div class="notes">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aliquid
+          at nesciunt ipsa numquam aliquam corrupti error! Neque accusantium
+          laudantium explicabo, ea qui pariatur aut ex inventore reiciendis!
+          Vitae, blanditiis!
+        </p>
+      </div>
+
+      <button class="Date">
+        Day 1
+        <br />
+        Monday 20th July, 2020
+      </button>
+
+      <div class="notes">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aliquid
+          at nesciunt ipsa numquam aliquam corrupti error! Neque accusantium
+          laudantium explicabo, ea qui pariatur aut ex inventore reiciendis!
+          Vitae, blanditiis!
+        </p>
+      </div>
+    </div>
+
+    <script>
+      var acc = document.getElementsByClassName("Date");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+
+    <script src="./app.js"></script>
+
+  </body>
+</html>
+ 

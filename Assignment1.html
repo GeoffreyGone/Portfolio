@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title> Assignment 1</title>
+    <style>
+      input[type="text"],
+      select {
+        width: 90%;
+        padding: 15px 30px;
+        margin: 10px 0;
+        display: inline-block;
+        border-radius: 4px;
+        border-color: white;
+        box-sizing: border-box;
+        font-size: 20px;
+      }
+
+      input[type="submit"] {
+        width: 90px;
+        height: 40px;
+        background-color: rgb(22, 190, 22);
+        color: rgb(255, 255, 255);
+        margin: 8px 0;
+        border: none;
+        border-radius: 22px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: rgb(235, 235, 98);
+        width: 90px;
+      }
+
+      .form {
+        border-radius: 5px;
+        background-color: #b4b4b4;
+        width: 50%;
+        padding: 20px;
+        margin: 5% 20%;
+      }
+      label {
+        font-size: 20px;
+      }
+      textarea {
+        width: 90%;
+      }
+      .all {
+        margin: 0px 0px 0px 50px;
+        padding: 0;
+      }
+      /* MOBILE */
+      @media screen and (max-width: 768px) {
+        /* body {
+          display: none;
+        } */
+        .form {
+          width: 300px;
+        }
+        .all {
+          margin: 0px;
+          padding: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img class="image" src="./image/logo.png" alt="" />
+        <h4>my text</h4>
+      </div>
+
+      <ul class="nav-links">
+        <li>
+          <a href="./index.html">HOME</a>
+        </li>
+        <li>
+          <a href="#">ABOUT</a>
+        </li>
+        <li>
+          <a href="#">PROJECTS</a>
+        </li>
+        <li>
+          <a href="./Assignments.html">ASSIGNMENTS</a>
+        </li>
+        <li>
+          <a href="./Thoughts.html">LESSONS</a>
+        </li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <div class="form">
+      <form action="">
+        <div class="all">
+          <label for="firstName">First Name</label>
+          <br />
+          <input placeholder="type first name" type="text" />
+          <br />
+          <label for="lastName">Last Name</label>
+          <br />
+          <input placeholder="type last name" type="text" />
+          <br />
+          <label for=""> Country</label>
+          <br />
+          <select name="" id="">
+            <option value="">Algeria</option>
+            <option value="">Angola</option>
+            <option value="">Benin</option>
+            <option value="">Botswana</option>
+            <option value="">Burkina Faso</option>
+            <option value="">Burundi</option>
+            <option value="">Cabo Verde</option>
+            <option value="">Cameroon</option>
+            <option value="">Central African Republic (CAR)</option>
+            <option value="">Cote d'Ivoire</option>
+            <option value="">Djibouti</option>
+            <option value="">Egypt</option>
+            <option value="">Ethiopia</option>
+            <option value="">Gambia</option>
+            <option value="">Ghana</option>
+            <option value="">Kenya</option>
+            <option value="">Liberia</option>
+            <option value="">Morocco</option>
+            <option value="">Nigeria</option>
+            <option value="">Rwanda</option>
+            <option value="">Sierra Leone</option>
+            <option value="">Sudan</option>
+            <option value="">Zimbabwe</option>
+          </select>
+          <br />
+          <label for="">Subject</label>
+          <br />
+          <br />
+          <textarea
+            placeholder="Write something"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <br />
+          <input type="submit" value="submit" />
+        </div>
+      </form>
+    </div>
+
+    <script src="./app.js"></script>
+
+
+  </body>
+</html>
