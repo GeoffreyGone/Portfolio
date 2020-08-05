@@ -35,3 +35,20 @@ function addTodo(event) {
 
   todoInput.value = "";
 }
+
+function deleteCheck(e) {
+  // for the delete button
+  const item = e.target;
+  if (item.classList[0] === "trash-btn") {
+    const todo = item.parentElement;
+    todo.remove();
+  }
+
+  // for the complete button
+  if (item.classList[0] === "complete-btn") {
+    const todo = item.parentElement;
+    todo.classList.toggle("completed");
+  }
+
+
+}

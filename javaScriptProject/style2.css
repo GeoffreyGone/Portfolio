@@ -60,7 +60,7 @@ form button:hover {
   align-items: center;
 }
 
-todo li {
+.todo li {
   flex: 1;
 }
 
@@ -72,16 +72,25 @@ todo li {
   border: none;
   cursor: pointer;
   font-size: 1rem;
+  
 }
 
-.complete-btn{
+.complete-btn {
   background: green;
+
 }
 
-.todo-item{
+.todo-item {
   padding: 0rem 0.5rem;
 }
 
-.fa-trash, .fa-check{
+.fa-trash,
+.fa-check {
   pointer-events: none;
 }
+
+.completed{
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
